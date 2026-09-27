@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+yolov8*.pt
+yolo*.onnx
+*.onnx
+runs/
+.DS_Store
+Thumbs.db
+
+# Local clone for hacking only — runtime depends on PyPI `target-finder-toolkit`
+/target_finder_toolkit/

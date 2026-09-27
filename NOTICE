@@ -1,0 +1,31 @@
+kill-mouse third-party notices
+==============================
+
+TargetFinder Toolkit
+--------------------
+License: MIT
+https://github.com/ahmedbenakouche/target_finder_toolkit
+
+kill-mouse uses TargetFinder (PyPI: `target-finder-toolkit`) for GUI-widget
+detection (YOLO26 UI models) and adapts its PyQt6 click-through overlay pattern
+(WindowTransparentForInput + WA_TranslucentBackground). Magnetic cursor snap
+logic is original to kill-mouse.
+
+Paper: "TargetFinder: Detecting Widgets from Pixels on Desktop Interfaces"
+
+ultralytics (pulled in by TargetFinder)
+--------------------------------------
+License: AGPL-3.0-only
+https://github.com/ultralytics/ultralytics
+
+Application source in this repository is MIT; distributing a combined work that
+includes ultralytics may require AGPL compliance.
+
+Other runtime deps (typical SPDX):
+- mss — MIT
+- numpy — BSD-3-Clause
+- opencv-python — Apache-2.0
+- pynput — LGPL-3.0
+- PyQt6 — GPL-3.0 (Qt) / Riverbank commercial options; see PyQt licensing
+- pyautogui — BSD-3-Clause
+- pywin32 — PSF-like (optional / legacy)
