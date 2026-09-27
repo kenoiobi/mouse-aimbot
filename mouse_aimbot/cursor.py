@@ -18,15 +18,15 @@ class CursorController(ABC):
 
 def get_cursor_controller() -> CursorController:
     if sys.platform == "win32":
-        from kill_mouse.platform.windows.cursor import WindowsCursorController
+        from mouse_aimbot.platform.windows.cursor import WindowsCursorController
 
         return WindowsCursorController()
     if sys.platform == "darwin":
-        from kill_mouse.platform.macos.cursor import MacOSCursorController
+        from mouse_aimbot.platform.macos.cursor import MacOSCursorController
 
         return MacOSCursorController()
     if sys.platform.startswith("linux"):
-        from kill_mouse.platform.linux.cursor import LinuxCursorController
+        from mouse_aimbot.platform.linux.cursor import LinuxCursorController
 
         return LinuxCursorController()
     raise NotImplementedError(f"Unsupported platform: {sys.platform}")

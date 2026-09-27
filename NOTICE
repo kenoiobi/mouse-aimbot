@@ -1,4 +1,4 @@
-kill-mouse third-party notices
+mouse-aimbot third-party notices
 ==============================
 
 This project stands on TargetFinder. Detection and the click-through overlay
@@ -27,7 +27,7 @@ What we reuse
     (FramelessWindowHint, WindowStaysOnTopHint, WindowTransparentForInput,
     WA_TranslucentBackground)
 
-What is original to kill-mouse
+What is original to mouse-aimbot
   - Magnetic / soft-aim cursor snap toward detected widgets
   - Force-quit hotkey, launch scripts, packaging
 

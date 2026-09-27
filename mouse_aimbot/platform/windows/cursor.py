@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import win32api
 
-from kill_mouse.cursor import CursorController
+from mouse_aimbot.cursor import CursorController
 
 
 class WindowsCursorController(CursorController):

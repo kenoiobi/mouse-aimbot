@@ -1,7 +1,7 @@
 [project]
-name = "kill-mouse"
+name = "mouse-aimbot"
 version = "0.1.0"
-description = "Semantic cursor snapping daemon — magnetically snap the OS cursor to detected UI elements"
+description = "Soft aim for your desktop pointer — magnetically snap the cursor to detected UI widgets"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
@@ -17,7 +17,7 @@ dependencies = [
 ]
 
 [project.scripts]
-kill-mouse = "kill_mouse.app:main"
+mouse-aimbot = "mouse_aimbot.app:main"
 
 [build-system]
 requires = ["setuptools>=68"]
@@ -25,7 +25,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["kill_mouse*"]
+include = ["mouse_aimbot*"]
 
 [tool.uv]
 package = true

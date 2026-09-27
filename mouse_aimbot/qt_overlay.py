@@ -12,11 +12,11 @@ import sys
 
 from PyQt6 import QtCore, QtGui, QtWidgets
 
-from kill_mouse.config import Config, DEFAULT
-from kill_mouse.inference import Detection, detections_from_targetfinder
-from kill_mouse.magnetic import compute_snap
+from mouse_aimbot.config import Config, DEFAULT
+from mouse_aimbot.inference import Detection, detections_from_targetfinder
+from mouse_aimbot.magnetic import compute_snap
 
-log = logging.getLogger("kill-mouse")
+log = logging.getLogger("mouse-aimbot")
 
 
 class SnapEngine(QtCore.QObject):

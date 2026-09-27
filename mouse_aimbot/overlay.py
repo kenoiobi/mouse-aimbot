@@ -5,7 +5,7 @@ from __future__ import annotations
 import sys
 from abc import ABC, abstractmethod
 
-from kill_mouse.inference import Detection
+from mouse_aimbot.inference import Detection
 
 
 class DebugOverlay(ABC):
@@ -29,7 +29,7 @@ class DebugOverlay(ABC):
 
 def get_debug_overlay() -> DebugOverlay:
     if sys.platform == "win32":
-        from kill_mouse.platform.windows.overlay import WindowsDebugOverlay
+        from mouse_aimbot.platform.windows.overlay import WindowsDebugOverlay
 
         return WindowsDebugOverlay()
     raise NotImplementedError(

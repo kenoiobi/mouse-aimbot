@@ -6,9 +6,9 @@ import logging
 import threading
 from collections.abc import Callable
 
-from kill_mouse.config import DEFAULT
+from mouse_aimbot.config import DEFAULT
 
-log = logging.getLogger("kill-mouse")
+log = logging.getLogger("mouse-aimbot")
 
 
 class QuitHotkey:

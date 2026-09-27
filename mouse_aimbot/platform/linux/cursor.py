@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from kill_mouse.cursor import CursorController
+from mouse_aimbot.cursor import CursorController
 
 
 class LinuxCursorController(CursorController):

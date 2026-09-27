@@ -5,8 +5,8 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 
-from kill_mouse.config import Config, DEFAULT
-from kill_mouse.inference import Detection
+from mouse_aimbot.config import Config, DEFAULT
+from mouse_aimbot.inference import Detection
 
 
 @dataclass(frozen=True)

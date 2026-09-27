@@ -1,4 +1,4 @@
-# kill-mouse
+# mouse-aimbot
 
 Local daemon that detects on-screen GUI widgets and **magnetically snaps** the OS cursor toward them. Built for imprecise pointing (eye trackers, trackpoints, low-DPI mice).
 
@@ -25,7 +25,7 @@ We use their published detector / UI-trained models (via PyPI) and adapted their
 Needs [uv](https://docs.astral.sh/uv/).
 
 ```powershell
-cd kill-mouse
+cd mouse-aimbot
 uv sync
 ```
 
@@ -36,18 +36,18 @@ Or just `.\run.ps1` / `.\debug.ps1` — installs uv if missing, syncs, and runs.
 ```powershell
 .\run.ps1          # snap only (no overlay) — daily driver
 .\debug.ps1        # snap + on-screen detection boxes
-uv run kill-mouse  # same as debug
-uv run python -m kill_mouse --no-overlay
+uv run mouse-aimbot  # same as debug
+uv run python -m mouse_aimbot --no-overlay
 ```
 
 ## What to expect
 
 - UI-trained YOLO26 via TargetFinder (buttons, links, inputs, …)
 - Cyan outlines = candidates; green = snapped target
-- Magnetic pull within ~50px of a box (`kill_mouse/config.py`)
+- Magnetic pull within ~50px of a box (`mouse_aimbot/config.py`)
 
 ## License
 
-- **kill-mouse code:** MIT
+- **mouse-aimbot code:** MIT
 - **TargetFinder Toolkit:** MIT — https://github.com/ahmedbenakouche/target_finder_toolkit
 - **ultralytics:** AGPL-3.0 — see `NOTICE`

@@ -1,5 +1,5 @@
 """
-kill-mouse application entrypoint.
+mouse-aimbot application entrypoint.
 
 Uses TargetFinder Toolkit for UI-widget detection + PyQt overlay, and our
 magnetic snap to warp the cursor toward nearby targets.
@@ -10,10 +10,10 @@ from __future__ import annotations
 import logging
 import sys
 
-from kill_mouse.config import DEFAULT, Config
-from kill_mouse.hotkeys import QuitHotkey
+from mouse_aimbot.config import DEFAULT, Config
+from mouse_aimbot.hotkeys import QuitHotkey
 
-log = logging.getLogger("kill-mouse")
+log = logging.getLogger("mouse-aimbot")
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -32,10 +32,10 @@ def main(argv: list[str] | None = None) -> None:
     from PyQt6 import QtCore, QtWidgets
     from target_finder_toolkit.targetfinder import TargetFinder
 
-    from kill_mouse.qt_overlay import SnapEngine, SnapOverlay
+    from mouse_aimbot.qt_overlay import SnapEngine, SnapOverlay
 
     mode = "debug overlay" if config.overlay_enabled else "no overlay"
-    log.info("Starting kill-mouse (%s + magnetic snap)", mode)
+    log.info("Starting mouse-aimbot (%s + magnetic snap)", mode)
     log.info("Force quit: %s", config.quit_hotkey)
 
     qt_app = QtWidgets.QApplication.instance() or QtWidgets.QApplication(sys.argv)

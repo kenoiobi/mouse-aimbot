@@ -10,9 +10,9 @@ from __future__ import annotations
 
 import tkinter as tk
 
-from kill_mouse.config import DEFAULT
-from kill_mouse.inference import Detection
-from kill_mouse.overlay import DebugOverlay
+from mouse_aimbot.config import DEFAULT
+from mouse_aimbot.inference import Detection
+from mouse_aimbot.overlay import DebugOverlay
 
 # Pure magenta chroma key — must not appear in outline colors.
 _TRANSPARENT = "#ff00ff"
@@ -21,7 +21,7 @@ _TRANSPARENT = "#ff00ff"
 class WindowsDebugOverlay(DebugOverlay):
     def __init__(self) -> None:
         self._root = tk.Tk()
-        self._root.title("kill-mouse debug")
+        self._root.title("mouse-aimbot debug")
         self._root.overrideredirect(True)
         self._root.attributes("-topmost", True)
         try:
