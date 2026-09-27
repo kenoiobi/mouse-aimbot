@@ -1,17 +1,59 @@
 kill-mouse third-party notices
 ==============================
 
+This project stands on TargetFinder. Detection and the click-through overlay
+approach are theirs; magnetic snap behavior is ours.
+
 TargetFinder Toolkit
 --------------------
-License: MIT
-https://github.com/ahmedbenakouche/target_finder_toolkit
+Authors: Ahmed Ben Akouche, Géry Casiez, Mathieu Nancel, Julien Gori
+License: MIT (Copyright (c) 2025 — see their LICENSE)
+GitHub:  https://github.com/ahmedbenakouche/target_finder_toolkit
+PyPI:    https://pypi.org/project/target-finder-toolkit/
+Docs:    https://target-finder-toolkit.netlify.app/
 
-kill-mouse uses TargetFinder (PyPI: `target-finder-toolkit`) for GUI-widget
-detection (YOLO26 UI models) and adapts its PyQt6 click-through overlay pattern
-(WindowTransparentForInput + WA_TranslucentBackground). Magnetic cursor snap
-logic is original to kill-mouse.
+Paper:
+  Ahmed Ben Akouche, Géry Casiez, Mathieu Nancel, and Julien Gori. 2026.
+  TargetFinder: Detecting Widgets from Pixels on Desktop Interfaces.
+  arXiv:2607.19907. https://arxiv.org/abs/2607.19907
 
-Paper: "TargetFinder: Detecting Widgets from Pixels on Desktop Interfaces"
+Dataset / models (from the paper release):
+  https://osf.io/fr6y4/
+  https://huggingface.co/ab-dev26/targetfinder
+
+What we reuse
+  - Runtime dependency on the published toolkit (widget YOLO models + detector API)
+  - PyQt6 overlay pattern adapted from their demo
+    (FramelessWindowHint, WindowStaysOnTopHint, WindowTransparentForInput,
+    WA_TranslucentBackground)
+
+What is original to kill-mouse
+  - Magnetic / soft-aim cursor snap toward detected widgets
+  - Force-quit hotkey, launch scripts, packaging
+
+Their MIT license text (required attribution)
+--------------------------------------------
+MIT License
+
+Copyright (c) 2025
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ultralytics (pulled in by TargetFinder)
 --------------------------------------
@@ -21,11 +63,11 @@ https://github.com/ultralytics/ultralytics
 Application source in this repository is MIT; distributing a combined work that
 includes ultralytics may require AGPL compliance.
 
-Other runtime deps (typical SPDX):
+Other runtime deps (typical SPDX)
+---------------------------------
 - mss — MIT
 - numpy — BSD-3-Clause
 - opencv-python — Apache-2.0
 - pynput — LGPL-3.0
 - PyQt6 — GPL-3.0 (Qt) / Riverbank commercial options; see PyQt licensing
 - pyautogui — BSD-3-Clause
-- pywin32 — PSF-like (optional / legacy)
