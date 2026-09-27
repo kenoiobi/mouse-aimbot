@@ -16,3 +16,6 @@ Thumbs.db
 
 # Local clone for hacking only — runtime depends on PyPI `target-finder-toolkit`
 /target_finder_toolkit/
+
+# Private notes / prompts — do not publish
+text.md
